@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.jingdianxi.mapper.NovelMapper">
+	<insert id = "addNovel" parameterType = "Novel">
+		insert into novel(name,category,author,info,abstracts,cover) values(#{name}, #{category}, #{author}, #{info}, #{abstracts}, #{cover})
+	</insert>
+	<delete id="delNovel">
+		delete from novel where id = #{value}
+	</delete>
+	<update id="editNovel" parameterType = "Novel">
+		update novel set name = #{name}, category = #{category}, author = #{author}, info = #{info}, abstracts = #{abstracts}, cover = #{cover} where id = #{id}
+	</update>
+	<select id = "getAllNovel" resultType = "Novel">
+		select * from novel
+	</select>
+	<select id = "getNovelById" resultType = "Novel">
+		select * from novel where id = #{value}
+	</select>
+	<select id = "getNovelByCategory" resultType = "Novel">
+		select * from novel where category = #{value}
+	</select>
+	<update id = "updateHits">
+		update novel set hits = hits + 1 where novel.id = (select novel from chapter where chapter.id = #{value})
+	</update>
+	<select id = "getNovelPaged" parameterType = "PagedParam" resultType = "Novel">
+		select * from novel
+		<where>
+			<if test = "category != null and category != 0">
+				and category = #{category}
+			</if>
+			<if test = "condition != null and condition != ''">
+				and (name like '%${condition}%' or author like '%${condition}%')
+			</if>
+		</where>
+		limit ${pageStart}, ${pageSize}
+	</select>
+	<select id = "getCount" parameterType = "PagedParam" resultType = "Integer">
+		select count(id) as num from novel
+		<where>
+			<if test = "category != 0">
+				and category = #{category}
+			</if>
+			<if test = "condition != null and condition != ''">
+				and (name like '%${condition}%' or author like '%${condition}%')
+			</if>
+		</where>
+	</select>
+</mapper>

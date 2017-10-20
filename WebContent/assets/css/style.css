@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+/*reset*/
+body, p, ul, li, ol, dl, dt, dd, table, td, th, h1, h2, h3, h4, h5, h6 { margin:0; padding:0;}
+body, input, textarea { font:12px/1.5 Verdana, Arial, Helvetica, sans-serif; word-wrap:break-word;}
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%;}
+em { font-style:normal;}
+ol,ul { list-style:none;}
+table { border-collapse:collapse; border-spacing:0;}
+img { border:none;}
+
+a { color:#333; text-decoration:none;}
+a:hover { color:#888; text-decoration:underline;}
+
+.clearfix:after { display:block; visibility:hidden; clear:both; height:0; content:".";}
+.clearfix { *zoom:1;}
+
+/* header */
+.header { position:relative; width:1003px; height:92px; margin:0 auto; background:#F2F2F2;}
+.header .space-name { position:absolute; top:22px; left:30px; font-size:20px; font-weight:bold;}
+.header .space-desc { position:absolute; top:60px; left:30px; color:#888;}
+.header .operate { position:absolute; top:5px; right:5px;}
+
+/* nav */
+.nav { width:1003px; height:28px; margin:0 auto 15px; border:solid #CCC; border-width:1px 0;}
+.nav ul { padding:0 0 0 15px;}
+.nav li { float:left; margin:0 15px; _display:inline;}
+.nav li a { line-height:28px;}
+
+/* footer */
+.footer { width:1003px; height:28px;padding-top:10px; margin:0 auto; border-top:1px solid #CCC; background:#F2F2F2; text-align:center;}
+
+/* 布局 */
+.content { width:1003px; margin:0 auto;}
+.main-wrap { float:left; width:100%;}
+.main-wrap .main { margin:10px 100px 0px 100px;}
+.aside { float:left; width:200px; margin-left:-993px;}
+
+/* 模块 */
+.mod { margin:0 0 15px; border:1px solid #CCC;}
+.mod .hd { height:24px; padding-left:9px; background:#F2F2F2; line-height:24px;}
+.mod .hd h2 { font-weight:bold; color:#666;}
+.mod-2 { margin:0 0 20px;}
+.mod-2 .title { border-bottom:1px solid #F2F2F2; padding:0 0 5px;}
+.mod-2 .title h3 { font-size:14px; font-weight:bold; color:#777;}
+
+/* 表单 */
+.form-area { margin:15px 15px 5px;}
+.form-item:after { display:block; visibility:hidden; clear:both; height:0; content:".";}
+.form-item { margin:0 0 15px; *zoom:1;}
+.form-item .label { float:left; width:70px; text-align:right; margin:0 5px 0 0; line-height:21px; white-space:nowrap; color:#777; _display:inline;}
+.form-item .ipt-txt-1,
+.form-item .ipt-txt-2 { width:200px; padding:2px 5px; background:#F5F5F5; border:1px solid #CCC;}
+.form-item .ipt-txt-2 { width:460px;}
+.form-item .textarea-0 { width:590px; height:36px; padding:5px; overflow:auto; background:none; border:1px solid #CCC;}
+.form-item .textarea-1 { width:590px; height:90px; padding:5px; overflow:auto; background:none; border:1px solid #CCC;}
+.form-item .textarea-2 { width:490px; height:150px; background:#F5F5F5;border:1px solid #CCC;}
+.form-item .operate,
+.form-item .input { float:left; margin-right:10px; _display:inline;}
+.form-item input  { vertical-align:middle;}
+.ipt-box,
+.ipt-radio { vertical-align:-2px;}
+.form-item select { padding:3px; vertical-align:middle;}
+.select-1 { width:60px;}
+.form-item .user-img { margin-left:10px; vertical-align:top;}
+.form-item .tip-desc { float:left; line-height:23px; color:#777;}
+.form-btn { margin:30px 0 10px;}
+.ipt-submit { padding:1px 5px; background:#F5F5F5; border:1px solid #CCC; *height:22px;}
+.checkbox-list { line-height:24px; color:#777;}
+
+/* 分页 */
+.paging { margin:20px 0 0; color:#777;}
+.paging .disable { color:#777;}
+.paging a { margin:0 4px;}
+.paging .num a { border:1px solid #CBCBCB; background:#F4F4F4; padding:2px 5px;}
+.paging .on { border:1px solid #CBCBCB;border-color:#E2E1B1; background:#FFFFC8;padding:2px 2px;}
+
+/* admin-menu */
+.admin-menu .bd { padding:10px 14px 20px;}
+.admin-menu dl { margin:0 0 10px; padding:0 0 10px; border-bottom:1px solid #F2F2F2;}
+.admin-menu dt { margin:0 0 6px 5px;}
+.admin-menu dt a { font-size:14px; font-weight:bold; color:#888;}
+.admin-menu dt a:hover { color:#333;}
+.admin-menu dd { margin:0 0 0 15px; line-height:20px;}
+
+/* 管理首页 */
+.admin-index .bd,
+.admin-setting .bd,
+.admin-password .bd,
+.admin-link .bd,
+.admin-article-list .bd,
+.admin-article-class .bd,
+.admin-photo-class .bd,
+.admin-photo-list .bd { padding:15px 25px;}
+.author-info { background:#FFD; border:1px solid #ECE686; margin:0 0 15px; padding:5px 10px; font-weight:bold; font-size:14px;}
+.author-info span { color:#888;}
+.author-info a { margin-right:15px;}
+
+/* 公告 */
+.notice { margin-right:320px;}
+.notice .cont { padding:5px;}
+.notice ul { line-height:1.8;}
+.notice-frame { float:right; width:300px; height:104px; border:1px solid #F2F2F2; text-align:center;}
+
+/* 累计访问量 */
+.website-pv .cont { padding:10px;}
+.website-pv li { float:left; width:351px; padding:0 0 20px; color:#777;}
+
+/* 显示选项 */
+.display-options .form-item .label { width:100px;}
+
+/* 修改密码 */
+.admin-password .form-btn { margin-left:75px;}
+
+/* 模板选择 */
+.setting-template ul { margin-left:-25px;}
+.setting-template li { float:left; width:120px; height:120px; margin:0 0 20px 50px; border:1px solid #F2F2F2; text-align:center; _display:inline;}
+.setting-template li img { vertical-align:top;}
+.setting-template li p { padding:8px 0;}
+.setting-template .form-btn { margin-left:24px;}
+
+/* 模板选择 */
+.setting-link .form-btn { margin-left:75px;}
+
+/* 发表文章、上传图片 */
+.article-post .form-area,
+.photo-post .form-area { margin:20px 15px 0 30px;}
+.article-post .label,
+.photo-post .label { width:40px;}
+.article-content {  }
+.article-post .textarea-2 { width:598px;}
+.article-post .form-btn,
+.photo-post .form-btn { margin-left:45px;}
+
+/* 文章列表 */
+.list-cont { border:1px solid #F2F2F2; border-top-width:2px; margin:10px 0 0; padding:0 15px 15px;}
+.list-table { margin:0 auto; width:100%; table-layout:fixed; color:#757575;}
+.list-table th,
+.list-table td { padding:15px 0; vertical-align:top; text-align:center;}
+.list-table td { border-top:1px solid #CCC;}
+.list-table .tit,
+.list-table .photo,
+.list-table .link { text-align:left;}
+.list-table .photo { width:150px;}
+.list-table .time { width:80px; text-align:center;}
+.list-table .status { width:150px;}
+.list-table .operate { width:240px;}
+
+/* 文章分类、相册分类 */
+.article-class .label,
+.photo-class .label { width:auto;}
+.article-class .ipt-txt-1,.photo-class .ipt-txt-1 { width:100px;}
+.article-class .ipt-txt-2,.photo-class .ipt-txt-2 { width:400px;}
+.article-class .input,
+.photo-class .input { margin-right:10px;}

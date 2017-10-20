@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.jingdianxi.mapper.ChapterMapper">
+	<insert id="addChapter" parameterType="Chapter">
+		insert into chapter(novel,title,content) values(#{novel}, #{title}, #{content})
+	</insert>
+	<delete id="delChapter">
+		delete from chapter where id = #{value}
+	</delete>
+	<update id="editChapter" parameterType="Chapter">
+		update chapter set novel = #{novel}, title = #{title}, content = #{content} where id = #{id}
+	</update>
+	<select id="getChapterByNovel" resultType="Chapter">
+		select * from chapter where novel = #{value}
+	</select>
+	<select id="getChapterById" resultType="Chapter">
+		select * from chapter where id = #{value}
+	</select>
+	<select id="getPrevChapter" resultType = "Integer">
+		select coalesce(max(id),0) as prev from (select * from chapter where novel = (select novel from chapter where id = #{value})) as temp where #{value} > id
+	</select>
+	<select id="getNextChapter" resultType = "Integer">
+		select coalesce(min(id),0) as next from (select * from chapter where novel = (select novel from chapter where id = #{value})) as temp where id > #{value}
+	</select>
+	<select id = "batchGetChapters" resultType = "map">
+		select chapter.*, novel.name, novel.cover from chapter join novel on chapter.novel = novel.id where chapter.id in
+		<foreach collection="list" item="chapter" open="(" separator="," close=")">
+			#{chapter}
+		</foreach>
+	</select>
+</mapper>
