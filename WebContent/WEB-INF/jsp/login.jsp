@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="${pageContext.request.contextPath}/assets/css/style.css" type="text/css" rel="stylesheet">
-<title>登录 - 耳聪心慧文端巧</title>
+<title>登录</title>
 <link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/assets/img/icon.png">
 <link href="${pageContext.request.contextPath}/assets/css/mricode.pagination.css" rel="stylesheet">
 <script src="${pageContext.request.contextPath}/assets/js/jquery-2.1.4.min.js"></script>

@@ -19,7 +19,7 @@
 <script src="${pageContext.request.contextPath}/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js?v=1.0.5" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/assets/js/novel.js?v=1.0.5" type="text/javascript"></script>
-<title>首页 - 耳聪心慧文端巧</title>
+<title>首页</title>
 <link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/assets/img/icon.png">
 <link href="${pageContext.request.contextPath}/assets/css/mricode.pagination.css" rel="stylesheet">
 <script src="${pageContext.request.contextPath}/assets/js/jquery-2.1.4.min.js"></script>

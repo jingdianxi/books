@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="${pageContext.request.contextPath}/assets/css/style.css" type="text/css" rel="stylesheet">
-<title>小说管理 - 管理员 - 耳聪心慧文端巧</title>
+<title>小说管理 - 管理员</title>
 <link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/assets/img/icon.png">
 <script>
 function imgPreview(fileDom){

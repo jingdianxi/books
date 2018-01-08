@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="${pageContext.request.contextPath}/assets/css/style.css" type="text/css" rel="stylesheet">
-<title>章节管理 - 管理员 - 耳聪心慧文端巧</title>
+<title>章节管理 - 管理员</title>
 <link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/assets/img/icon.png">
 <script src="${pageContext.request.contextPath}/assets/js/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath}/assets/ueditor/ueditor.config.js"></script>

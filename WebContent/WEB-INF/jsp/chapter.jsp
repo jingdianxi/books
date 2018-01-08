@@ -17,7 +17,7 @@
 <script src="${pageContext.request.contextPath}/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js?v=1.0.5" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/assets/js/novel.js?v=1.0.5" type="text/javascript"></script>
-<title>${chapter.title} - ${novel.name} - ${novel.author} - 耳聪心慧文端巧</title>
+<title>${chapter.title} - ${novel.name} - ${novel.author}</title>
 <link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/assets/img/icon.png">
 </head>
 <body>
