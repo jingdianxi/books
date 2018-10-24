@@ -5,14 +5,14 @@ import java.util.List;
 import com.jingdianxi.domain.Category;
 
 public interface CategoryMapper {
-	// 增加分类
+	// 澧炲姞鍒嗙被
 	int addCate(Category category);
-	// 删除分类
-	int delCate(int categoryidid);
-	// 修改分类
+	// 鍒犻櫎鍒嗙被
+	int delCate(int categoryid);
+	// 淇敼鍒嗙被
 	int editCate(Category category);
-	// 查询全部分类
+	// 鏌ヨ鍏ㄩ儴鍒嗙被
 	List<Category> getAllCategory();
-	// 按id查询分类
+	// 鎸塱d鏌ヨ鍒嗙被
 	Category getCateById(int categoryid);
 }
